@@ -19,10 +19,10 @@ Replace the text in the 3 `<label>` tags with:
 
 Change the value of the 3 `value` attributes so they match the text in the `label` tags.
 
-Change all instances of `where-do-you-live` to `how-many-balls`.
+Change all instances of `temperature` to `how-many-balls`.
 
 1. Select **Find**, then **Find in buffer**.
-2. In the **Find** field enter `where-do-you-live`.
+2. In the **Find** field enter `temperature`.
 3. In the **Replace** field enter `how-many-balls`.
 4. Select **Replace all**.
 

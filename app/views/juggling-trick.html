@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Handwashing Techniques
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,15 +13,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Handwashing Techniques</h1>
+      <h1 class="govuk-heading-xl">What is your most impressive juggling trick?</h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/check-your-answers" method="post">
 
-        <p>[Insert question content here]</p>
-
-       <p>Read about <a href="preventing-spread">preventing spread</a> instead.</p>
-        
-      </a>
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="most-impressive-trick">
+    What is your most impressive juggling trick?
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
 
         <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
 

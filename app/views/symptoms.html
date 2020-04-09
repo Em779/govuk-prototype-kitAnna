@@ -20,13 +20,13 @@
     </span>
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <input class="govuk-radios__input" id="yes" name="changed-name" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="changed-name">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <input class="govuk-radios__input" id="no" name="changed-name" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="changed-name-2">
           No
         </label>
@@ -35,19 +35,22 @@
   </fieldset>
 </div>
 
-<button class="govuk-button" data-module="govuk-button" href="symptoms.html">
+<button class="govuk-button" data-module="govuk-button" href="symptoms.html" onclick="checkSubmitType()">
   Continue
 </button>
 
 <script>
-  function checkAnswer(){
-      var response = document.getElementById('answer').value;
-      if (response == "correctanswer")
-          location = 'symptoms.html'; // 'symptoms.html';
-      else 
-          location = 'no.html'; // 'no.html';
-      return false;
-  }
-  </script>
-  
+function checkSubmitType()
+{
+    if(document.getElementById('yes').checked)
+    {
+        window.location="data-input.html"; 
+    }
+    else if(document.getElementById('no').checked)
+    {
+         window.location="no.html";
+    }
+
+}
+</script>
 {% endblock %}

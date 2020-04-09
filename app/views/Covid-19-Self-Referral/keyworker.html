@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+{# Are you a Keyworker? #}
+
+
+<div class="govuk-form-group">
+<form onSubmit="return checkAnswer();">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Are you a keyworker?
+      </h1>
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
+      You can check if you're a keyworker <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision">here</a>.
+    </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input  class="govuk-radios__input" id="yes" name="yes" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input  class="govuk-radios__input" id="no" name="no" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button type="submit" value="SUBMIT" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+<script>
+  function checkAnswer(){
+      var response = document.getElementById('yes').value;
+      if (response == "yes")
+          location = 'symptoms.html'; // 'symptoms.html';
+      else
+          location = 'no.html'; // 'no.html';
+      return false;
+  }
+  </script>
+
+{% endblock %}
+

@@ -39,4 +39,15 @@
   Continue
 </button>
 
+<script>
+  function checkAnswer(){
+      var response = document.getElementById('answer').value;
+      if (response == "correctanswer")
+          location = 'symptoms.html'; // 'symptoms.html';
+      else 
+          location = 'no.html'; // 'no.html';
+      return false;
+  }
+  </script>
+  
 {% endblock %}

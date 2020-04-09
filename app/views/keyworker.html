@@ -9,7 +9,7 @@
 {# Are you a Keyworker? #}
 
 <div class="govuk-form-group">
-<form onSubmit="return checkAnswer();">
+
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
@@ -21,14 +21,14 @@
     </span>
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="answer" name="changed-name" type="radio" value="answer">
-        <label class="govuk-label govuk-radios__label" for="changed-name">
+        <input class="govuk-radios__input" id="yes" name="changed-name" type="radio" value="symptoms.html">
+        <label class="govuk-label govuk-radios__label" for="yes" id="answer">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="no" name="changed-name" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        <input class="govuk-radios__input" id="no" name="changed-name" type="radio" value="no.html">
+        <label class="govuk-label govuk-radios__label" for="no">
           No
         </label>
       </div>
@@ -36,20 +36,24 @@
   </fieldset>
 </div>
 
-<button type="submit" value="SUBMIT" class="govuk-button" data-module="govuk-button">
+<button type="submit" value="SUBMIT" class="govuk-button" data-module="govuk-button" onclick="checkSubmitType()">
   Continue
 </button>
-
+  
 <script>
-  function checkAnswer(){
-      var response = document.getElementById('answer').value;
-      if (response == "correctanswer")
-          location = 'symptoms.html'; // 'symptoms.html';
-      else 
-          location = 'no.html'; // 'no.html';
-      return false;
-  }
-  </script>
+function checkSubmitType()
+{
+    if(document.getElementById('yes').checked)
+    {
+        window.location="symptoms.html"; 
+    }
+    else if(document.getElementById('no').checked)
+    {
+         window.location="no.html";
+    }
+
+}
+</script>
 
 {% endblock %}
 

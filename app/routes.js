@@ -1,16 +1,3 @@
-{% extends "layout-v2-patient.html" %}
-
-{% block pageScripts %}
-<script type="text/javascript" src="/js/search.js"></script>
-<script type="text/javascript" src="/js/auto.js"></script>
-{% endblock %}
-
-const express = require('express')
-const router = express.Router()
-
-// Add your routes here - above the module.exports line
-
-module.exports = router
 // External dependencies
 const express = require("express");
 const router = express.Router();

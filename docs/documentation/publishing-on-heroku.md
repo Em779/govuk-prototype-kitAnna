@@ -51,8 +51,8 @@ Prototypes made with the kit require a username and password when published onli
 ### To set username and password:
 
 ```
-heroku config:set USERNAME=username_here
-heroku config:set PASSWORD=password_here
+heroku config:set USERNAME=username
+heroku config:set PASSWORD=password
 ```
 
 ## 7) Deploy your work
